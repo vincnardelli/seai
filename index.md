@@ -5,15 +5,26 @@ layout: page
 show_sidebar: false
 ---
 
-# Quick links
+# Before starting
+Before starting the course, I invite you to setup Python on your computer to be able to follow all the lessons without problems. 
+In [Python Setup](/python_setup) you will find all the necessary information. 
+If you are not an expert user of Python, **I recommend you to use Colab**.
+It is a totally cloud-based tool that avoids having to configure your computer (a google account is required).
 
-## Lab 1 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb)
+In the section below you will find buttons for each lesson to automatically import all the material directly to Colab. Alternatively you can save all the material by downloading the ZIP file or cloning the Github repository.
+
+# Course schedule
+## Lab 1 - Intro to Python 
+Date: 24/05/2021
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb)
+
+### Topics:
 - Intro
 - 1 - Matrix computation with NumPy
 - 2 - Data manipulation and analysis with Pandas
 - 3 - Graphs with Matplotlib and Seaborn
 
-
+### Extras:
 - Extra topic: Git and Github (with Niccolò Salvini)
 - Extra material: Statistics with Python:
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra1_linear_regression.ipynb) Extra: Linear regression
