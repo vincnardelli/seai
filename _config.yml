@@ -1,4 +1,6 @@
-title: Spatial Analysis with Python Lab
+title: Spatial Analysis with Python
 description: Material for Python Labs - Spatial Econometrics Advanced Institute 2021
 show_downloads: true
+github:
+  zip_url: https://github.com/vincnardelli/seai2021/archive/refs/heads/main.zip
 theme: jekyll-theme-cayman
