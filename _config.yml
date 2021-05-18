@@ -1,9 +1,8 @@
+# Site Settings
+lang: en
 title: Spatial Analysis with Python
+tagline: Material for Python Labs - Spatial Econometrics Advanced Institute 2021
+email: vincnardelli@gmail.com
 description: Material for Python Labs - Spatial Econometrics Advanced Institute 2021
-show_sidebar: false
+fixed_navbar: top
 remote_theme:  chrisrhymes/bulma-clean-theme 
-navigation:
-  - name: Download Zip
-    link: https://github.com/vincnardelli/seai2021/archive/refs/heads/main.zip
-  - name: Sea Website
-    link: https://spatialeconometricsassociation.org/
