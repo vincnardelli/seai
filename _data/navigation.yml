@@ -1,0 +1,9 @@
+- name: Download
+  link: /#
+  dropdown:
+    - name: Zip File
+      link: https://github.com/vincnardelli/seai2021/archive/refs/heads/main.zip
+    - name: Open in GitHub
+      link: https://github.com/vincnardelli/seai2021/
+- name: SEA website
+  link: https://www.spatialeconometricsassociation.org/
