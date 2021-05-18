@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+# seai2021
 
-You can use the [editor on GitHub](https://github.com/vincnardelli/seai2021/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Material for Spatial Analysis with Python - Spatial Econometrics Advanced Institute 2021 Labs
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[Official Course website](https://www.spatialeconometricsassociation.org/spatial-econometrics-advanced-institute/)
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+---
 
-```markdown
-Syntax highlighted code block
+## Quick links
 
-# Header 1
-## Header 2
-### Header 3
+### Lab 1 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb)
+- Intro
+- 1 - Matrix computation with NumPy
+- 2 - Data manipulation and analysis with Pandas
+- 3 - Graphs with Matplotlib and Seaborn
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vincnardelli/seai2021/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Extra topic: Git and Github (with Niccolò Salvini)
+- Extra material: Statistics with Python:
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra1_linear_regression.ipynb) Extra: Linear regression
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra2_logistic_regression.ipynb) Extra: Logistic regression 
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra3_SVM.ipynb) Extra: SVM 
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra4_k_means_clustering.ipynb) Extra: k-means clustering 
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra5_DBSCAN.ipynb) Extra: DBSCAN 
