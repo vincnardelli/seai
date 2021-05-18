@@ -20,6 +20,7 @@ Work in progress...
 - VanderPlas, Jake. Python data science handbook: Essential tools for working with data.  O'Reilly Media, Inc., 2016. [Website](https://jakevdp.github.io/PythonDataScienceHandbook/)
 - McKinney, Wes. Python for data analysis: Data wrangling with Pandas, NumPy, and IPython.  O'Reilly Media, Inc., 2012. [Website](https://wesmckinney.com/pages/book.html)
 - Anselin, Luc, and Sergio Joseph Rey. Modern spatial econometrics in practice: A guide to GeoDa, GeoDaSpace and PySAL. GeoDa Press LLC, 2014.
+
 [Check all the references in the course website](https://vincnardelli.github.io/seai2021/references)
 
 
