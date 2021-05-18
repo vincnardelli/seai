@@ -16,7 +16,8 @@ In the section below you will find buttons for each lesson to automatically impo
 # Course schedule
 ## Lab 1 - Intro to Python 
 Date: 24/05/2021
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb) [Open in web page](/seai2021/seai_lab1/seai_lab1)
 
 ### Topics:
 - Intro
