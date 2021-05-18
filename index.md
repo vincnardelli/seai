@@ -1,15 +1,13 @@
-# seai2021
-
-Material for Spatial Analysis with Python - Spatial Econometrics Advanced Institute 2021 Labs
-
-[Official Course website](https://www.spatialeconometricsassociation.org/spatial-econometrics-advanced-institute/)
-
-
+---
+title: Spatial Analysis with Python
+subtitle: Material for Python Labs - Spatial Econometrics Advanced Institute 2021
+layout: page
+show_sidebar: false
 ---
 
-## Quick links
+# Quick links
 
-### Lab 1 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb)
+## Lab 1 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb)
 - Intro
 - 1 - Matrix computation with NumPy
 - 2 - Data manipulation and analysis with Pandas
