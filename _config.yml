@@ -1,7 +1,7 @@
 title: Spatial Analysis with Python
 description: Material for Python Labs - Spatial Econometrics Advanced Institute 2021
 show_sidebar: false
-theme: bulma-clean-theme
+remote_theme:  chrisrhymes/bulma-clean-theme 
 navigation:
   - name: Download Zip
     link: https://github.com/vincnardelli/seai2021/archive/refs/heads/main.zip
