@@ -1,7 +1,5 @@
 - name: Python Setup
   link: /python_setup
-- name: Course
-  link: /course
 - name: Download Codes
   link: /#
   dropdown:
