@@ -8,7 +8,7 @@ show_sidebar: false
 
 # Python Setup
 
-<img src="https://3.bp.blogspot.com/-apoBeWFycKQ/XhKB8fEprwI/AAAAAAAACM4/Sl76yzNSNYwlShIBrheDAum8L9qRtWNdgCLcBGAsYHQ/w1200-h630-p-k-no-nu/colab.png" align="right" height="60" />
+<img src="https://3.bp.blogspot.com/-apoBeWFycKQ/XhKB8fEprwI/AAAAAAAACM4/Sl76yzNSNYwlShIBrheDAum8L9qRtWNdgCLcBGAsYHQ/w1200-h630-p-k-no-nu/colab.png" align="right" width="100px" />
 
 ## Google Colab  
 
@@ -33,7 +33,7 @@ Colaboratory, or "Colab" for short, allows you to write and execute Python in yo
 
 
 ## Jupyter Notebook 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/883px-Jupyter_logo.svg.png" align="right" height="90" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/883px-Jupyter_logo.svg.png" align="right" width="100px" />
 
 The Jupyter Notebook is a web-based application for document authoring that combines live codes with narrative text, equations and views.
 
