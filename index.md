@@ -7,7 +7,7 @@ show_sidebar: false
 
 # Before starting
 Before starting the course, I invite you to setup Python on your computer to be able to follow all the lessons without problems. 
-In [Python Setup](/python_setup) you will find all the necessary information. 
+In [Python Setup](/seai2021/python_setup) you will find all the necessary information. 
 If you are not an expert user of Python, **I recommend you to use Colab**.
 It is a totally cloud-based tool that avoids having to configure your computer (a google account is required).
 
