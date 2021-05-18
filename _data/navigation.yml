@@ -1,4 +1,6 @@
-- name: Download
+- name: Python Setup
+  link: /python-setup/
+- name: Download Codes
   link: /#
   dropdown:
     - name: Zip File
