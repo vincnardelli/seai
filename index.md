@@ -33,3 +33,15 @@ Date: 24/05/2021
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra3_SVM.ipynb) Extra: SVM 
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra4_k_means_clustering.ipynb) Extra: k-means clustering 
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra5_DBSCAN.ipynb) Extra: DBSCAN 
+
+
+----
+### Contributions
+
+**Author**: Vincenzo Nardelli [Github](https://github.com/vincnardelli) [Linkedin](https://linkedin.com/in/vincnardelli)
+**Contributor**: Niccolò Salvini [Github](https://github.com/NiccoloSalvini)
+
+This course is released in open source. Feel free to reuse this material by citing the source!
+If you find an error or want to add any topics feel free to contribute to the project on the Github repository.
+The material in this website, including all code samples, is released under the Apache-2.0 License license.
+
