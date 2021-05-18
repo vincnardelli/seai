@@ -1,6 +1,14 @@
 title: Spatial Analysis with Python
 description: Material for Python Labs - Spatial Econometrics Advanced Institute 2021
-show_downloads: true
+show_downloads: false
 github:
   zip_url: https://github.com/vincnardelli/seai2021/archive/refs/heads/main.zip
 theme: jekyll-theme-cayman
+
+
+header:
+- title: Home
+  url: /
+  
+- title: Sea Website
+  url: https://www.spatialeconometricsassociation.org/
