@@ -17,7 +17,7 @@ In the section below you will find buttons for each lesson to automatically impo
 ## Lab 1 - Intro to Python 
 Date: 24/05/2021
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20on%20webpage-blue)](/seai2021/seai_lab1/seai_lab1)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai2021/seai_lab1/seai_lab1)
 
 ### Topics:
 - Intro
