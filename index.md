@@ -5,8 +5,13 @@ layout: page
 show_sidebar: false
 ---
 
+
+Welcome to the Spatial Analysis with Python course!
+The material you will find on this site was created for the labs of the Spatial Econometrics Advanced Institute 2021 course organized by the Spatial Econometrics Association.
+
+
 # Before starting
-Before starting the course, I invite you to setup Python on your computer to be able to follow all the lessons without problems. 
+I invite you to setup Python on your computer to be able to follow all the lessons without problems. 
 In [Python Setup](/seai2021/python_setup) you will find all the necessary information. 
 If you are not an expert user of Python, **I recommend you to use Colab**.
 It is a totally cloud-based tool that avoids having to configure your computer (a google account is required).
