@@ -2,7 +2,9 @@
 ## SEAI 2021 - Python - Lab 1
 # Intro to Python 
 
-Lab structure:
+Vincenzo Nardelli - vincnardelli@gmail.com - https://github.com/vincnardelli
+
+## Lab structure:
 - Intro
 - 1 - Matrix computation with NumPy
 - 2 - Data manipulation and analysis with Pandas
@@ -163,7 +165,7 @@ vector[0]
 
 
 
-Inoltre nel caso di selezione multipla, il secondo valore che rappresenta l'ultimo elemento NON è compreso nel subset (a differenza di R che è compreso).
+Furthermore, in the case of multiple selection, the index starts from 0 (unlike R which starts from 1) and the second value representing the last element is NOT included in the subset (unlike R which is included).
 
 
 ```python
@@ -300,6 +302,7 @@ L3 = [True, "2", 3.0, 4]
 - Array Attributes
 - Array Indexing
 - Array Slicing
+- Arithmetic Operations
 
 NumPy brings the computational power of languages like C and Fortran to Python!
 
@@ -450,9 +453,9 @@ np.random.normal(0, 1, (3, 3))
 
 
 
-    array([[ 0.56829433,  3.65217967, -0.25531525],
-           [ 2.41747319,  1.05852874,  0.53693052],
-           [-0.94315921,  1.29694326,  0.92313418]])
+    array([[-1.02677226,  1.11060734,  0.03739026],
+           [-0.24285475,  0.88068307,  0.94551808],
+           [-0.06911716, -0.09423746, -1.25280425]])
 
 
 
@@ -931,6 +934,140 @@ print(x2[0, :])  # first row of x2
 ```
 
     [12  5  2  4]
+
+
+## Arithmetic Operations
+
+
+```python
+a = np.array([1,2,3])
+b = np.array([(1.5,2,3), (4,5,6)], dtype = float)
+```
+
+
+```python
+a + b
+```
+
+
+
+
+    array([[2.5, 4. , 6. ],
+           [5. , 7. , 9. ]])
+
+
+
+
+```python
+a - b
+```
+
+
+
+
+    array([[-0.5,  0. ,  0. ],
+           [-3. , -3. , -3. ]])
+
+
+
+
+```python
+a * b
+```
+
+
+
+
+    array([[ 1.5,  4. ,  9. ],
+           [ 4. , 10. , 18. ]])
+
+
+
+
+```python
+a / b
+```
+
+
+
+
+    array([[0.66666667, 1.        , 1.        ],
+           [0.25      , 0.4       , 0.5       ]])
+
+
+
+
+```python
+np.exp(a)
+```
+
+
+
+
+    array([ 2.71828183,  7.3890561 , 20.08553692])
+
+
+
+
+```python
+np.log(a)
+```
+
+
+
+
+    array([0.        , 0.69314718, 1.09861229])
+
+
+
+
+```python
+c = np.array([1.5,2], dtype = float)
+c
+```
+
+
+
+
+    array([1.5, 2. ])
+
+
+
+
+```python
+d = np.array([4,5], dtype = float)
+d
+```
+
+
+
+
+    array([4., 5.])
+
+
+
+
+```python
+c.dot(d)
+```
+
+
+
+
+    16.0
+
+
+
+
+```python
+1.5*4+2*5
+```
+
+
+
+
+    16.0
+
 
 
 # 2 - Data manipulation and analysis with Pandas
@@ -2783,7 +2920,7 @@ planets.groupby('method')
 
 
 
-    <pandas.core.groupby.generic.DataFrameGroupBy object at 0x7fa02dac3ad0>
+    <pandas.core.groupby.generic.DataFrameGroupBy object at 0x7fdced466128>
 
 
 
@@ -2795,7 +2932,7 @@ planets.groupby('method')['orbital_period']
 
 
 
-    <pandas.core.groupby.generic.SeriesGroupBy object at 0x7fa02dadd810>
+    <pandas.core.groupby.generic.SeriesGroupBy object at 0x7fdced485240>
 
 
 
@@ -3649,7 +3786,7 @@ plt.plot(x, np.cos(x), '--');
 ```
 
 
-![png](output_209_0.png)
+![png](output_221_0.png)
 
 
 
@@ -3663,7 +3800,7 @@ plt.plot(x, np.sin(x));
 ```
 
 
-![png](output_211_0.png)
+![png](output_223_0.png)
 
 
 
@@ -3681,7 +3818,7 @@ plt.plot(x, x + 7, linestyle=':');  # dotted
 ```
 
 
-![png](output_212_0.png)
+![png](output_224_0.png)
 
 
 
@@ -3693,7 +3830,7 @@ plt.plot(x, x + 3, ':r');  # dotted red
 ```
 
 
-![png](output_213_0.png)
+![png](output_225_0.png)
 
 
 
@@ -3710,7 +3847,7 @@ plt.legend();
 ```
 
 
-![png](output_214_0.png)
+![png](output_226_0.png)
 
 
 
@@ -3723,12 +3860,12 @@ plt.scatter(x, y, marker='o')
 
 
 
-    <matplotlib.collections.PathCollection at 0x7fa02d408d50>
+    <matplotlib.collections.PathCollection at 0x7fdced88b550>
 
 
 
 
-![png](output_215_1.png)
+![png](output_227_1.png)
 
 
 
@@ -3745,7 +3882,7 @@ plt.colorbar();
 ```
 
 
-![png](output_216_0.png)
+![png](output_228_0.png)
 
 
 
@@ -3755,7 +3892,7 @@ plt.hist(data);
 ```
 
 
-![png](output_217_0.png)
+![png](output_229_0.png)
 
 
 
@@ -3766,7 +3903,7 @@ plt.hist(data, bins=30, density=True, alpha=0.5,
 ```
 
 
-![png](output_218_0.png)
+![png](output_230_0.png)
 
 
 
@@ -3780,7 +3917,7 @@ cb.set_label('counts in bin')
 ```
 
 
-![png](output_219_0.png)
+![png](output_231_0.png)
 
 
 Multiple plots
@@ -3803,7 +3940,7 @@ plt.plot(x, np.cos(x));
 ```
 
 
-![png](output_222_0.png)
+![png](output_234_0.png)
 
 
 Object-oriented interface
@@ -3820,7 +3957,7 @@ ax[1].plot(x, np.cos(x));
 ```
 
 
-![png](output_224_0.png)
+![png](output_236_0.png)
 
 
 ## Seaborn
@@ -3915,7 +4052,7 @@ sns.histplot(data=iris, x="sepal_length", hue="species", multiple="stack");
 ```
 
 
-![png](output_227_0.png)
+![png](output_239_0.png)
 
 
 
@@ -3924,7 +4061,7 @@ sns.kdeplot(data=iris, x="sepal_length", hue="species", shade=True, alpha=0.5);
 ```
 
 
-![png](output_228_0.png)
+![png](output_240_0.png)
 
 
 
@@ -3933,5 +4070,5 @@ sns.pairplot(data=iris, hue='species', height=2);
 ```
 
 
-![png](output_229_0.png)
+![png](output_241_0.png)
 
