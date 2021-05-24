@@ -31,7 +31,7 @@ Date: 24/05/2021
 - 3 - Graphs with Matplotlib and Seaborn
 
 ### Extras:
-- Extra topic: Git and Github (with Niccolò Salvini)
+- Extra topic: Git and Github (with Niccolò Salvini) [Link slides](https://github.com/vincnardelli/seai2021/raw/main/lab1/git%2Bgithub%20for%20beginners.pdf)
 - Extra material: Statistics with Python:
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra1_linear_regression.ipynb) Extra: Linear regression
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra2_logistic_regression.ipynb) Extra: Logistic regression 
