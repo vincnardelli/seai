@@ -22,13 +22,13 @@ show_sidebar: false
 
 Official website [https://numpy.org/](https://numpy.org/) 
 
-[Numpy cheatsheet](https//s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf)
+[Numpy cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf)
 
 **Pandas** 
 
 Official website [https://pandas.pydata.org/](https://pandas.pydata.org/)
 
-[Pandas cheatsheet](https//s3.amazonaws.com/assets.datacamp.com/blog_assets/Pandas_Cheat_Sheet.pdf)
+[Pandas cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Pandas_Cheat_Sheet.pdf)
 
 **Matplotlib** 
 
@@ -40,4 +40,4 @@ Official website [https://matplotlib.org/](https://matplotlib.org/)
 
 Official website [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
 
-[Seaborn cheatsheet](https//s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Seaborn_Cheat_Sheet.pdf)
+[Seaborn cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Seaborn_Cheat_Sheet.pdf)
