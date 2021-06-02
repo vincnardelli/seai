@@ -39,6 +39,16 @@ Date: 24/05/2021
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra4_k_means_clustering.ipynb) Extra: k-means clustering 
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra5_DBSCAN.ipynb) Extra: DBSCAN 
 
+## Lab 2 - Spatial data and W matrices
+Date: 03/06/2021
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab2/seai_lab2.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai2021/seai_lab2/seai_lab2)
+
+### Topics:
+- Intro
+- 1 - Loading and plotting Spatial Data
+- 2 - Computation of W matrix
+- 3 - Extra: Intro to kriging with pykrige
 
 ----
 ### Contributions
