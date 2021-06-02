@@ -60,4 +60,4 @@ Official website [https://carto.com/developers/cartoframes/](https://carto.com/d
 
 **PyKrige** 
 
-Official website [https://geostat-framework.readthedocs.io/projects/pykrige/](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/contents.html
+Official website [https://geostat-framework.readthedocs.io/projects/pykrige/](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/contents.html)
