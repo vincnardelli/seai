@@ -50,6 +50,19 @@ Date: 03/06/2021
 - 2 - Computation of W matrix
 - 3 - Extra: Intro to kriging with pykrige
 
+
+
+
+## Lab 3 - ESDA and Spatial Econometrics Models
+Date: 11/06/2021
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab3/seai_lab3.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai2021/seai_lab3/seai_lab3)
+
+### Topics:
+- Intro
+- 1 - Exploratory Spatial Data Analysis
+- 2 - Spatial Econometrics Models
+
 ----
 ### Contributions
 
