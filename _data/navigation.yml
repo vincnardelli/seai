@@ -1,12 +1,14 @@
+- name: R Setup
+  link: /r_setup
 - name: Python Setup
   link: /python_setup
 - name: Download Codes
   link: /#
   dropdown:
     - name: Zip File
-      link: https://github.com/vincnardelli/seai2021/archive/refs/heads/main.zip
+      link: https://github.com/vincnardelli/seai/archive/refs/heads/main.zip
     - name: Open in GitHub
-      link: https://github.com/vincnardelli/seai2021/
+      link: https://github.com/vincnardelli/seai/
 - name: References
   link: /references
 - name: SEA website

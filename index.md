@@ -1,6 +1,6 @@
 ---
-title: Spatial Analysis with Python
-subtitle: Material for R and Python Labs - Spatial Econometrics Advanced Institute 2022
+title: Spatial Analysis with R and Python
+subtitle: Material for Labs - Spatial Econometrics Advanced Institute 2022
 layout: page
 show_sidebar: false
 ---
