@@ -12,7 +12,7 @@ The material you will find on this site was created for the labs of the Spatial 
 
 # Before starting
 I invite you to setup R and Python on your computer to be able to follow all the lessons without problems. 
-In [R Setup](/seai/r_setup) [Python Setup](/seai/python_setup) you will find all the necessary information. 
+In the pages [R Setup](/seai/r_setup) and [Python Setup](/seai/python_setup) you will find all the necessary information. 
 If you are not an expert user of Python, **I recommend you to use Colab**.
 It is a totally cloud-based tool that avoids having to configure your computer (a google account is required).
 
