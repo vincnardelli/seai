@@ -1,4 +1,3 @@
-
 ## SEAI 2021 - Python - Lab 1
 # Intro to Python 
 
@@ -3786,7 +3785,9 @@ plt.plot(x, np.cos(x), '--');
 ```
 
 
-![png](output_221_0.png)
+    
+![png](seai_lab1_files/seai_lab1_221_0.png)
+    
 
 
 
@@ -3800,7 +3801,9 @@ plt.plot(x, np.sin(x));
 ```
 
 
-![png](output_223_0.png)
+    
+![png](seai_lab1_files/seai_lab1_223_0.png)
+    
 
 
 
@@ -3818,7 +3821,9 @@ plt.plot(x, x + 7, linestyle=':');  # dotted
 ```
 
 
-![png](output_224_0.png)
+    
+![png](seai_lab1_files/seai_lab1_224_0.png)
+    
 
 
 
@@ -3830,7 +3835,9 @@ plt.plot(x, x + 3, ':r');  # dotted red
 ```
 
 
-![png](output_225_0.png)
+    
+![png](seai_lab1_files/seai_lab1_225_0.png)
+    
 
 
 
@@ -3847,7 +3854,9 @@ plt.legend();
 ```
 
 
-![png](output_226_0.png)
+    
+![png](seai_lab1_files/seai_lab1_226_0.png)
+    
 
 
 
@@ -3865,7 +3874,9 @@ plt.scatter(x, y, marker='o')
 
 
 
-![png](output_227_1.png)
+    
+![png](seai_lab1_files/seai_lab1_227_1.png)
+    
 
 
 
@@ -3882,7 +3893,9 @@ plt.colorbar();
 ```
 
 
-![png](output_228_0.png)
+    
+![png](seai_lab1_files/seai_lab1_228_0.png)
+    
 
 
 
@@ -3892,7 +3905,9 @@ plt.hist(data);
 ```
 
 
-![png](output_229_0.png)
+    
+![png](seai_lab1_files/seai_lab1_229_0.png)
+    
 
 
 
@@ -3903,7 +3918,9 @@ plt.hist(data, bins=30, density=True, alpha=0.5,
 ```
 
 
-![png](output_230_0.png)
+    
+![png](seai_lab1_files/seai_lab1_230_0.png)
+    
 
 
 
@@ -3917,7 +3934,9 @@ cb.set_label('counts in bin')
 ```
 
 
-![png](output_231_0.png)
+    
+![png](seai_lab1_files/seai_lab1_231_0.png)
+    
 
 
 Multiple plots
@@ -3940,7 +3959,9 @@ plt.plot(x, np.cos(x));
 ```
 
 
-![png](output_234_0.png)
+    
+![png](seai_lab1_files/seai_lab1_234_0.png)
+    
 
 
 Object-oriented interface
@@ -3957,7 +3978,9 @@ ax[1].plot(x, np.cos(x));
 ```
 
 
-![png](output_236_0.png)
+    
+![png](seai_lab1_files/seai_lab1_236_0.png)
+    
 
 
 ## Seaborn
@@ -4052,7 +4075,9 @@ sns.histplot(data=iris, x="sepal_length", hue="species", multiple="stack");
 ```
 
 
-![png](output_239_0.png)
+    
+![png](seai_lab1_files/seai_lab1_239_0.png)
+    
 
 
 
@@ -4061,7 +4086,9 @@ sns.kdeplot(data=iris, x="sepal_length", hue="species", shade=True, alpha=0.5);
 ```
 
 
-![png](output_240_0.png)
+    
+![png](seai_lab1_files/seai_lab1_240_0.png)
+    
 
 
 
@@ -4070,5 +4097,7 @@ sns.pairplot(data=iris, hue='species', height=2);
 ```
 
 
-![png](output_241_0.png)
+    
+![png](seai_lab1_files/seai_lab1_241_0.png)
+    
 

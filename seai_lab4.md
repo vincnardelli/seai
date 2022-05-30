@@ -1,5 +1,4 @@
-
-## SEAI 2021 - Python - Lab 2
+## SEAI 2022 - Python - Lab 4
 # Spatial data and W matrices
 
 Vincenzo Nardelli - vincnardelli@gmail.com - https://github.com/vincnardelli
@@ -202,7 +201,7 @@ Before to start... install Python Libraries!
 
     Collecting cartoframes
     [?25l  Downloading https://files.pythonhosted.org/packages/a2/34/e20671c9b56b9d174078fa0556be3b7f848a98174cd5e81e12d8bcc63359/cartoframes-1.2.1-py2.py3-none-any.whl (244kB)
-    [K     |████████████████████████████████| 245kB 8.4MB/s eta 0:00:01
+    [K     |████████████████████████████████| 245kB 8.4MB/s 
     [?25hRequirement already satisfied: geopandas<1.0,>=0.6.0 in /usr/local/lib/python3.7/dist-packages (from cartoframes) (0.9.0)
     Requirement already satisfied: appdirs<2.0,>=1.4.3 in /usr/local/lib/python3.7/dist-packages (from cartoframes) (1.4.4)
     Collecting semantic-version<3,>=2.8.0
@@ -271,7 +270,7 @@ Now, we download from the web the dataset for this lab.
 ! unzip boston.zip
 ! wget https://geodacenter.github.io/data-and-lab//data/kingcounty.zip
 ! unzip kingcounty.zip
-! wget https://github.com/vincnardelli/seai2021/raw/main/lab2/data/dataNUTS3.zip
+! wget https://github.com/vincnardelli/seai/raw/main/lab4/data/dataNUTS3.zip
 ! unzip dataNUTS3.zip
 ```
 
@@ -1075,7 +1074,9 @@ sns.scatterplot(data=data, x="pop_dens_log", y="pcgdp_log")
 
 
 
-![png](seai_lab2_files/seai_lab2_14_1.png)
+    
+![png](seai_lab4_files/seai_lab4_14_1.png)
+    
 
 
 
@@ -1091,7 +1092,9 @@ sns.scatterplot(data=data, x="pop_dens_log", y="pcgdp_log", hue="state", alpha=0
 
 
 
-![png](seai_lab2_files/seai_lab2_15_1.png)
+    
+![png](seai_lab4_files/seai_lab4_15_1.png)
+    
 
 
 
@@ -1107,7 +1110,9 @@ sns.lmplot(data=data, x="pop_dens_log", y="pcgdp_log", scatter_kws={'alpha':0.2}
 
 
 
-![png](seai_lab2_files/seai_lab2_16_1.png)
+    
+![png](seai_lab4_files/seai_lab4_16_1.png)
+    
 
 
 ## Areal data
@@ -1629,7 +1634,9 @@ gdf.plot(column='pop_dens', cmap='Reds')
 
 
 
-![png](seai_lab2_files/seai_lab2_23_1.png)
+    
+![png](seai_lab4_files/seai_lab4_23_1.png)
+    
 
 
 EQUAL INTERVAL divides the data into equal size classes (e.g., 0-10, 10-20, 20-30, etc.) and works best on data that is generally spread across the entire range. CAUTION: Avoid equal interval if your data are skewed to one end or if you have one or two really large outlier values.
@@ -1642,7 +1649,9 @@ plt.set_ylim(34, 70);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_25_0.png)
+    
+![png](seai_lab4_files/seai_lab4_25_0.png)
+    
 
 
 NATURAL BREAKS is a kind of “optimal” classification scheme that finds class breaks that will minimize within-class variance and maximize between-class differences. 
@@ -1655,7 +1664,9 @@ plt.set_ylim(34, 70);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_27_0.png)
+    
+![png](seai_lab4_files/seai_lab4_27_0.png)
+    
 
 
 QUANTILES will create attractive maps that place an equal number of observations in each class.
@@ -1669,7 +1680,9 @@ plt.set_ylim(34, 70);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_29_0.png)
+    
+![png](seai_lab4_files/seai_lab4_29_0.png)
+    
 
 
 
@@ -1680,7 +1693,9 @@ plt.set_ylim(34, 70);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_30_0.png)
+    
+![png](seai_lab4_files/seai_lab4_30_0.png)
+    
 
 
 ### Interactive plots with Carto Frames
@@ -2461,7 +2476,9 @@ kc.plot(column='price', cmap='Reds', legend=True, alpha=0.5, figsize=(10, 6));
 ```
 
 
-![png](seai_lab2_files/seai_lab2_41_0.png)
+    
+![png](seai_lab4_files/seai_lab4_41_0.png)
+    
 
 
 
@@ -2470,7 +2487,9 @@ kc.plot(column='price', cmap='coolwarm', legend=True, alpha=0.3, figsize=(10, 6)
 ```
 
 
-![png](seai_lab2_files/seai_lab2_42_0.png)
+    
+![png](seai_lab4_files/seai_lab4_42_0.png)
+    
 
 
 
@@ -2479,7 +2498,9 @@ kc.plot(column='price', scheme='Quantiles', k=5, cmap='Reds', legend=True, alpha
 ```
 
 
-![png](seai_lab2_files/seai_lab2_43_0.png)
+    
+![png](seai_lab4_files/seai_lab4_43_0.png)
+    
 
 
 
@@ -2540,11 +2561,11 @@ Layer(
 
   <!-- pako -->
   <script src=&quot;https://libs.cartocdn.com/cartoframes/dependencies/pako_inflate.min.js&quot;></script>
-  
-  <!-- html2canvas -->
-  
 
-  
+  <!-- html2canvas -->
+
+
+
   <style>
   body {
     margin: 0;
@@ -2694,17 +2715,17 @@ Layer(
 <body class=&quot;as-app-body as-app&quot;>
   <img id=&quot;map-image&quot; class=&quot;map-image&quot; alt='Static map image' />
   <as-responsive-content id=&quot;main-container&quot;>
-    
-      
+
+
 
 <aside class=&quot;as-sidebar as-sidebar--right&quot; id=&quot;widgets&quot; data-name=&quot;Widgets&quot;>
-  
-    
-      
-        
+
+
+
+
           <div class=&quot;as-box&quot;>
             <section class=&quot;as-body&quot;>
-    
+
       <div>
   <as-widget-header
     header=&quot;Houses&quot;
@@ -2719,85 +2740,85 @@ Layer(
     </span>
   </p>
 
-  
+
 </div>
-    
+
   </section>
           </div>
-        
+
           <div class=&quot;as-box&quot;>
             <section class=&quot;as-body&quot;>
-    
+
       <div>
   <as-histogram-widget
     id=&quot;layer0_widget1&quot;
     description=&quot;&quot;
     heading=&quot;Sqft&quot;>
   </as-histogram-widget>
-  
+
 </div>
-    
+
   </section>
           </div>
-        
+
           <div class=&quot;as-box&quot;>
             <section class=&quot;as-body&quot;>
-    
+
       <div>
   <as-histogram-widget
     id=&quot;layer0_widget2&quot;
     description=&quot;&quot;
     heading=&quot;Bedrooms&quot;>
   </as-histogram-widget>
-  
+
 </div>
-    
+
   </section>
           </div>
-        
-    
-  
+
+
+
 </aside>
-    
+
     <main class=&quot;as-main&quot;>
       <div class=&quot;as-map-area&quot;>
         <div id=&quot;map&quot; class=&quot;map&quot;></div>
-        
-        
+
+
           <div class=&quot;as-map-panels&quot; data-name=&quot;Legends&quot;>
             <div class=&quot;as-panel as-panel--vertical as-panel--left as-panel--top&quot;>
-              
+
 
 <div class=&quot;as-panel__element&quot; id=&quot;legends&quot;>
   <as-layer-selector id=&quot;layer-selector&quot;>
-    
-      
-        
-        
+
+
+
+
         <div slot=&quot;as-checkbox-layer-0-slot&quot;>
-          
-            
+
+
               <as-legend
                 heading=&quot;price&quot;
                 description=&quot;&quot;>
                 <as-legend-color-bins id=&quot;layer0_map0_legend0&quot; slot=&quot;legends&quot;></as-legend-color-bins>
-                
+
               </as-legend>
-            
-          
+
+
         </div>
-      
-    
+
+
   </as-layer-selector>
 </div>
             </div> <!-- as-panel -->
           </div> <!-- as-map-panels -->
-        
+
       </div> <!-- as-map-area -->
     </main> <!-- as-main -->
   </as-responsive-content>
 
-  
+
 
   <div id=&quot;error-container&quot; class=&quot;error&quot;>
   <section class=&quot;error-section&quot;>
@@ -3929,7 +3950,9 @@ sns.displot(w_card, bins=3);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_51_0.png)
+    
+![png](seai_lab4_files/seai_lab4_51_0.png)
+    
 
 
 ## Creation of a W matrix for irregular data
@@ -4104,7 +4127,9 @@ sns.displot(w_card, bins=10);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_64_0.png)
+    
+![png](seai_lab4_files/seai_lab4_64_0.png)
+    
 
 
 
@@ -4122,7 +4147,9 @@ plot_spatial_weights(w_queen, columbus);
 
 
 
-![png](seai_lab2_files/seai_lab2_65_1.png)
+    
+![png](seai_lab4_files/seai_lab4_65_1.png)
+    
 
 
 
@@ -4140,7 +4167,9 @@ plot_spatial_weights(w_rook, columbus);
 
 
 
-![png](seai_lab2_files/seai_lab2_66_1.png)
+    
+![png](seai_lab4_files/seai_lab4_66_1.png)
+    
 
 
 
@@ -4377,7 +4406,9 @@ boston.plot(column="MEDV", figsize=(10, 6), scheme='Quantiles', k=7, cmap='Blues
 
 
 
-![png](seai_lab2_files/seai_lab2_71_1.png)
+    
+![png](seai_lab4_files/seai_lab4_71_1.png)
+    
 
 
 ### KNN
@@ -4945,7 +4976,9 @@ plot_spatial_weights(knn5, boston);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_77_0.png)
+    
+![png](seai_lab4_files/seai_lab4_77_0.png)
+    
 
 
 ### Kernel Weights
@@ -5082,7 +5115,9 @@ plot_spatial_weights(w_kernel, boston);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_83_0.png)
+    
+![png](seai_lab4_files/seai_lab4_83_0.png)
+    
 
 
 
@@ -5128,7 +5163,9 @@ plot_spatial_weights(w_kernel_gaussian, boston);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_86_0.png)
+    
+![png](seai_lab4_files/seai_lab4_86_0.png)
+    
 
 
 ### Distance
@@ -5222,7 +5259,9 @@ plot_spatial_weights(w_distance15, boston);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_91_0.png)
+    
+![png](seai_lab4_files/seai_lab4_91_0.png)
+    
 
 
 
@@ -5248,7 +5287,9 @@ plot_spatial_weights(w_distance5, boston);
 ```
 
 
-![png](seai_lab2_files/seai_lab2_94_0.png)
+    
+![png](seai_lab4_files/seai_lab4_94_0.png)
+    
 
 
 # Kriging
@@ -5318,7 +5359,9 @@ OK = OrdinaryKriging(
 
 
 
-![png](seai_lab2_files/seai_lab2_98_1.png)
+    
+![png](seai_lab4_files/seai_lab4_98_1.png)
+    
 
 
     Calculating statistics on variogram model fit...
@@ -5343,7 +5386,9 @@ OK.display_variogram_model()
 ```
 
 
-![png](seai_lab2_files/seai_lab2_100_0.png)
+    
+![png](seai_lab4_files/seai_lab4_100_0.png)
+    
 
 
 
@@ -5364,7 +5409,9 @@ OK.plot_epsilon_residuals()
 ```
 
 
-![png](seai_lab2_files/seai_lab2_102_0.png)
+    
+![png](seai_lab4_files/seai_lab4_102_0.png)
+    
 
 
 
@@ -5390,7 +5437,9 @@ plt.imshow(z)
 
 
 
-![png](seai_lab2_files/seai_lab2_104_1.png)
+    
+![png](seai_lab4_files/seai_lab4_104_1.png)
+    
 
 
 

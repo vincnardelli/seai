@@ -53,7 +53,7 @@ Date: 10/06/2021
 ## Lab 4 - Spatial data and W matrices with Python
 Date: 10/06/2021
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab2/seai_lab2.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab2/seai_lab2)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab4/seai_lab4.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab4/seai_lab4)
 
 ### Topics:
 - Intro
@@ -76,7 +76,7 @@ Date: 17/06/2021
 ## Lab 7 - ESDA and Spatial Econometrics Models with Python
 Date: 17/06/2021
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab3/seai_lab3.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab3/seai_lab3)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab7/seai_lab7.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab7/seai_lab7)
 
 ### Topics:
 - Intro

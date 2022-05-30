@@ -1,5 +1,4 @@
-
-## SEAI 2021 - Python - Lab 3
+## SEAI 2022 - Python - Lab 7
 # ESDA & Spatial Econometrics Models
 
 Vincenzo Nardelli - vincnardelli@gmail.com - https://github.com/vincnardelli
@@ -555,7 +554,9 @@ columbus.plot(column="CRIME", figsize=(10, 6),legend=True)
 
 
 
-![png](seai_lab3_files/seai_lab3_8_1.png)
+    
+![png](seai_lab7_files/seai_lab7_8_1.png)
+    
 
 
 
@@ -564,7 +565,9 @@ columbus.plot(column="CRIME", figsize=(10, 6), scheme='Quantiles', k=7, cmap='Bl
 ```
 
 
-![png](seai_lab3_files/seai_lab3_9_0.png)
+    
+![png](seai_lab7_files/seai_lab7_9_0.png)
+    
 
 
 
@@ -617,11 +620,11 @@ Layer(
 
   <!-- pako -->
   <script src=&quot;https://libs.cartocdn.com/cartoframes/dependencies/pako_inflate.min.js&quot;></script>
-  
-  <!-- html2canvas -->
-  
 
-  
+  <!-- html2canvas -->
+
+
+
   <style>
   body {
     margin: 0;
@@ -771,46 +774,46 @@ Layer(
 <body class=&quot;as-app-body as-app&quot;>
   <img id=&quot;map-image&quot; class=&quot;map-image&quot; alt='Static map image' />
   <as-responsive-content id=&quot;main-container&quot;>
-    
+
     <main class=&quot;as-main&quot;>
       <div class=&quot;as-map-area&quot;>
         <div id=&quot;map&quot; class=&quot;map&quot;></div>
-        
-        
+
+
           <div class=&quot;as-map-panels&quot; data-name=&quot;Legends&quot;>
             <div class=&quot;as-panel as-panel--vertical as-panel--left as-panel--top&quot;>
-              
+
 
 <div class=&quot;as-panel__element&quot; id=&quot;legends&quot;>
   <as-layer-selector id=&quot;layer-selector&quot;>
-    
-      
-        
-        
+
+
+
+
         <div slot=&quot;as-checkbox-layer-0-slot&quot;>
-          
-            
+
+
               <as-legend
                 heading=&quot;CRIME&quot;
                 description=&quot;&quot;>
                 <as-legend-color-bins id=&quot;layer0_map0_legend0&quot; slot=&quot;legends&quot;></as-legend-color-bins>
-                
+
               </as-legend>
-            
-          
+
+
         </div>
-      
-    
+
+
   </as-layer-selector>
 </div>
             </div> <!-- as-panel -->
           </div> <!-- as-map-panels -->
-        
+
       </div> <!-- as-map-area -->
     </main> <!-- as-main -->
   </as-responsive-content>
 
-  
+
 
   <div id=&quot;error-container&quot; class=&quot;error&quot;>
   <section class=&quot;error-section&quot;>
@@ -1910,7 +1913,9 @@ columbus.plot(column="CRIME_W", figsize=(10, 6), scheme='Quantiles', k=7, cmap='
 
 
 
-![png](seai_lab3_files/seai_lab3_16_1.png)
+    
+![png](seai_lab7_files/seai_lab7_16_1.png)
+    
 
 
 
@@ -1927,7 +1932,9 @@ ax[1].set_title("Crime Spatial Lag");
 ```
 
 
-![png](seai_lab3_files/seai_lab3_17_0.png)
+    
+![png](seai_lab7_files/seai_lab7_17_0.png)
+    
 
 
 ### Moran's Index
@@ -1957,7 +1964,9 @@ plt.xlabel("Moran's I");
 ```
 
 
-![png](seai_lab3_files/seai_lab3_20_0.png)
+    
+![png](seai_lab7_files/seai_lab7_20_0.png)
+    
 
 
 
@@ -1993,7 +2002,9 @@ moran_scatterplot(mi, aspect_equal=True);
 ```
 
 
-![png](seai_lab3_files/seai_lab3_24_0.png)
+    
+![png](seai_lab7_files/seai_lab7_24_0.png)
+    
 
 
 
@@ -2002,7 +2013,9 @@ moran_scatterplot(mi, aspect_equal=True, zstandard=False);
 ```
 
 
-![png](seai_lab3_files/seai_lab3_25_0.png)
+    
+![png](seai_lab7_files/seai_lab7_25_0.png)
+    
 
 
 ### Local Moran
@@ -2040,7 +2053,9 @@ moran_scatterplot(mi_local, p=0.05);
 ```
 
 
-![png](seai_lab3_files/seai_lab3_29_0.png)
+    
+![png](seai_lab7_files/seai_lab7_29_0.png)
+    
 
 
 
@@ -2051,7 +2066,9 @@ lisa_cluster(mi_local, columbus, p=0.05, figsize = (10,10));
 ```
 
 
-![png](seai_lab3_files/seai_lab3_30_0.png)
+    
+![png](seai_lab7_files/seai_lab7_30_0.png)
+    
 
 
 
@@ -2061,7 +2078,9 @@ plot_local_autocorrelation(mi_local, columbus, 'CRIME');
 ```
 
 
-![png](seai_lab3_files/seai_lab3_31_0.png)
+    
+![png](seai_lab7_files/seai_lab7_31_0.png)
+    
 
 
 ## Spatial Econometrics Models
