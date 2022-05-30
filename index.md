@@ -1,18 +1,18 @@
 ---
 title: Spatial Analysis with Python
-subtitle: Material for Python Labs - Spatial Econometrics Advanced Institute 2021
+subtitle: Material for R and Python Labs - Spatial Econometrics Advanced Institute 2022
 layout: page
 show_sidebar: false
 ---
 
 
-Welcome to the Spatial Analysis with Python course!
-The material you will find on this site was created for the labs of the Spatial Econometrics Advanced Institute 2021 course organized by the Spatial Econometrics Association.
+Welcome to the Spatial Analysis with R and Python course!
+The material you will find on this site was created for the labs of the Spatial Econometrics Advanced Institute 2022 course organized by the Spatial Econometrics Association.
 
 
 # Before starting
-I invite you to setup Python on your computer to be able to follow all the lessons without problems. 
-In [Python Setup](/seai2021/python_setup) you will find all the necessary information. 
+I invite you to setup R and Python on your computer to be able to follow all the lessons without problems. 
+In [R Setup](/seai/r_setup) [Python Setup](/seai/python_setup) you will find all the necessary information. 
 If you are not an expert user of Python, **I recommend you to use Colab**.
 It is a totally cloud-based tool that avoids having to configure your computer (a google account is required).
 
@@ -20,9 +20,9 @@ In the section below you will find buttons for each lesson to automatically impo
 
 # Course schedule
 ## Lab 1 - Intro to Python 
-Date: 24/05/2021
+Date: 03/06/2021
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/seai_lab1.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai2021/seai_lab1/seai_lab1)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/seai_lab1.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab1/seai_lab1)
 
 ### Topics:
 - Intro
@@ -31,18 +31,29 @@ Date: 24/05/2021
 - 3 - Graphs with Matplotlib and Seaborn
 
 ### Extras:
-- Extra topic: Git and Github (with Niccolò Salvini) [Link slides](https://github.com/vincnardelli/seai2021/raw/main/lab1/git%2Bgithub%20for%20beginners.pdf)
+- Extra topic: Git and Github (with Niccolò Salvini) [Link slides](https://github.com/vincnardelli/seai/raw/main/lab1/git%2Bgithub%20for%20beginners.pdf)
 - Extra material: Statistics with Python:
-  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra1_linear_regression.ipynb) Extra: Linear regression
-  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra2_logistic_regression.ipynb) Extra: Logistic regression 
-  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra3_SVM.ipynb) Extra: SVM 
-  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra4_k_means_clustering.ipynb) Extra: k-means clustering 
-  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab1/extra/seai_lab1_extra5_DBSCAN.ipynb) Extra: DBSCAN 
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/extra/seai_lab1_extra1_linear_regression.ipynb) Extra: Linear regression
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/extra/seai_lab1_extra2_logistic_regression.ipynb) Extra: Logistic regression 
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/extra/seai_lab1_extra3_SVM.ipynb) Extra: SVM 
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/extra/seai_lab1_extra4_k_means_clustering.ipynb) Extra: k-means clustering 
+  - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/extra/seai_lab1_extra5_DBSCAN.ipynb) Extra: DBSCAN 
 
-## Lab 2 - Spatial data and W matrices
-Date: 03/06/2021
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab2/seai_lab2.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai2021/seai_lab2/seai_lab2)
+## Lab 2 - Intro to spatial data with R
+Date: 09/06/2021
+
+
+
+## Lab 3 - Spatial W matrices with R
+Date: 10/06/2021
+
+
+
+## Lab 4 - Spatial data and W matrices with Python
+Date: 10/06/2021
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab2/seai_lab2.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab2/seai_lab2)
 
 ### Topics:
 - Intro
@@ -52,11 +63,20 @@ Date: 03/06/2021
 
 
 
+## Lab 5 - Spatial Autocorrelation with R
+Date: 16/06/2021
 
-## Lab 3 - ESDA and Spatial Econometrics Models
-Date: 11/06/2021
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai2021/blob/main/lab3/seai_lab3.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai2021/seai_lab3/seai_lab3)
+
+## Lab 6 - Spatial Econometrics Models with R
+Date: 17/06/2021
+
+
+
+## Lab 7 - ESDA and Spatial Econometrics Models with Python
+Date: 17/06/2021
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab3/seai_lab3.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab3/seai_lab3)
 
 ### Topics:
 - Intro
