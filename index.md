@@ -42,6 +42,7 @@ Date: 03/06/2021
 
 ## Lab 2 - Intro to R
 Date: 09/06/2021
+
 [![Open in web page](https://img.shields.io/badge/md-Open%20in%20webpage-blue)](/seai/seai_lab2)
 
 ### Topics:
