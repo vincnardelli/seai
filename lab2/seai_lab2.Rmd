@@ -1,12 +1,13 @@
 ---
-title: "SEAI 2022 - R - Lab 2 - Intro to R"
-author: "Vincenzo Nardelli - vincnardelli@gmail.com - https://github.com/vincnardelli"
 output:
-  html_document:
-    df_print: paged
+  md_document
 ---
 
-# Lab structure
+# SEAI 2022 - R - Lab 2
+# Intro to R
+Vincenzo Nardelli - vincnardelli@gmail.com - https://github.com/vincnardelli
+
+## Lab structure
 - Intro
 - Matrix computation
 - Data manipulation with dplyr
@@ -14,7 +15,7 @@ output:
 
 Let's start from the basics!
 
-```{r echo=TRUE}
+```{r}
 3 + 5
 ```
 
