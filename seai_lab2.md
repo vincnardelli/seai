@@ -1,4 +1,9 @@
-# Lab structure
+# SEAI 2022 - R - Lab 2 - Intro to R
+
+Vincenzo Nardelli - <vincnardelli@gmail.com> -
+<https://github.com/vincnardelli>
+
+## Lab structure
 
 -   Intro
 -   Matrix computation
