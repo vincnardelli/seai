@@ -1,0 +1,383 @@
+---
+title: "SEAI 2022 - R - Lab 2 - Intro to R"
+author: "Vincenzo Nardelli - vincnardelli@gmail.com - https://github.com/vincnardelli"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Lab structure
+- Intro
+- Matrix computation
+- Data manipulation with dplyr
+- Graphs with ggplot2
+
+Let's start from the basics!
+
+```{r echo=TRUE}
+3 + 5
+```
+
+```{r}
+12/7
+```
+
+```{r}
+result <- 3 + 5
+result
+```
+
+```{r}
+print(result)
+```
+
+
+```{r}
+result <- result * 3.1415
+print(result)
+```
+
+```{r}
+vector = c(1, 3, 8, 13)
+vector
+```
+
+Unlike Python, the basic version of R allow operations between scalars and matrices without loading any external packages.
+
+```{r}
+vector[1]
+```
+
+The subset is very similar to Python but the index starts from 1 instead of 0. 
+
+Furthermore, in the case of multiple selection, the index starts from 1 and the second value representing the last element is included in the subset (unlike Python which is NOT included).
+
+```{r}
+vector[1:3]
+```
+
+```{r}
+vector[c(FALSE, TRUE, TRUE, FALSE)]
+```
+
+```{r}
+vector < 3
+```
+```{r}
+vector[vector < 3]
+```
+
+```{r}
+1:10
+```
+```{r}
+seq(from=1, to=10, by=1)
+```
+
+Inside a vector we can insert just homogeneous class object.
+
+```{r}
+class("a")
+```
+```{r}
+class(1)
+```
+```{r}
+c(1, "a")
+```
+
+```{r}
+class(c(1, "a"))
+```
+
+# 1 - Matrix computation
+```{r}
+a <- matrix(c(10, 8, 5, 12), nrow=2, ncol=2, byrow=TRUE)
+a
+```
+
+```{r}
+dim(a)
+```
+
+Subsetting in two dimension
+
+```{r}
+a[1, ]
+```
+
+```{r}
+a[, 1]
+```
+```{r}
+a[1, 1]
+```
+
+Operations with matrices
+
+```{r}
+a + 2
+```
+```{r}
+a * 2
+```
+
+```{r}
+t(a)
+```
+
+```{r}
+b <- matrix(c(5, 3, 15, 6), ncol = 2, byrow = TRUE)
+b
+```
+```{r}
+a + b
+```
+
+Element-wise multiplication
+
+```{r}
+a * b 
+```
+
+Matrix multiplication (matricial multiplication)
+
+```{r}
+a %*% b
+```
+
+```{r}
+crossprod(a,b)
+```
+```{r}
+t(a) %*% b
+```
+
+Kronecker product
+
+```{r}
+a %x% b
+```
+
+Determinant
+
+```{r}
+det(a)
+```
+
+Inverse of a matrix 
+
+```{r}
+solve(a)
+```
+
+
+# 2 - Data manipulation with dplyr
+
+Let's start loading same data from R.
+
+```{r}
+data(mtcars)
+mtcars
+```
+
+```{r}
+class(mtcars)
+```
+
+A ``data.frame`` is an analog of a matrix which can contains a differenc class of object for each column. It is the perfect class to store the data which we commonly use for our analysis.
+
+```{r}
+dim(mtcars)
+```
+
+```{r}
+colnames(mtcars)
+```
+
+```{r}
+summary(mtcars)
+```
+
+Subset a dataframe with base R
+
+```{r}
+mtcars[1,]
+```
+```{r}
+mtcars[1:3, ]
+```
+```{r}
+mtcars[, 1]
+```
+```{r}
+mtcars$hp
+```
+
+## Data loading
+
+```{r}
+path = "https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv"
+titanic = read.csv(path)
+head(titanic)
+```
+
+Now we will explore the use of dplyr in subsetting, manipulating and summarising our data frame.
+Most of the task that we will cover are possible also in base R without the use of others packages but dplyr simplify a lot the work. 
+
+
+## R packages
+
+How to install an R package from CRAN
+```{r}
+#install.packages("dplyr")
+```
+
+Load package in the environment
+
+```{r}
+library(dplyr)
+```
+
+## Subset variables (columns)
+```{r}
+select(titanic, PassengerId, Age)
+```
+
+## Subset observations (Rows)
+```{r}
+filter(titanic, Age < 18)
+```
+## The pipe function
+The pipe function %>% helps to create a series of function to perform the data wrangling and makes the code more readable. For example if we want to select some columns and filter some rows we can write...
+
+```{r}
+filter(select(titanic, PassengerId, Age), Age <18)
+```
+As you can see the select function is nested in the filter function to keep the order we decided.
+Using pipes the code could be writed as:
+```{r}
+titanic %>% 
+  select(PassengerId, Age) %>% 
+  filter(Age < 18)
+```
+
+You can think a pipe as the command "then".
+The previous algorithm can be interpreted as:
+- Load data then
+- Select Id and Age then
+- Filter Age less then 18
+
+## Make new variables
+
+```{r}
+titanic %>% 
+  select(PassengerId, Age) %>% 
+  filter(!is.na(Age)) %>% 
+  mutate(Age_Bracket = ifelse(Age < 18, 'Minor','Major'))
+```
+
+# Arrange data
+```{r}
+titanic %>% 
+  select(PassengerId, Age) %>% 
+  filter(!is.na(Age)) %>% 
+  mutate(Age_Bracket = ifelse(Age < 18, 'Minor','Major')) %>% 
+  arrange(Age)
+```
+
+
+## Group and summarise data
+
+```{r}
+titanic %>% 
+  select(PassengerId, Survived, Sex) %>% 
+  group_by(Sex) %>% 
+  summarise(survived_perc = mean(Survived))
+```
+
+```{r}
+titanic %>% 
+  select(PassengerId, Survived, Age) %>% 
+  filter(!is.na(Age)) %>% 
+  mutate(Age_Bracket = ifelse(Age < 18, 'Minor','Major')) %>% 
+  group_by(Age_Bracket) %>% 
+  summarise(survived_perc = mean(Survived))
+```
+
+```{r}
+titanic %>% 
+  select(PassengerId, Survived, Age, Sex) %>% 
+  filter(!is.na(Age)) %>% 
+  mutate(Age_Bracket = ifelse(Age < 18, 'Minor','Major')) %>% 
+  group_by(Age_Bracket, Sex) %>% 
+  summarise(survived_perc = mean(Survived))
+```
+
+
+```{r}
+titanic %>% 
+  filter(Sex == 'male') %>%
+  group_by(Embarked) %>%
+  count()
+```
+
+# 2 - Data visualization with ggplot2
+
+```{r}
+#install.packages("ggplot2")
+library(ggplot2)
+```
+
+## Geom bar
+
+```{r}
+ggplot(titanic, aes(x=Pclass, fill=Survived)) + 
+  geom_bar() +
+  labs( y="Number of Passengers", x="Passenger Class", title="Titanic Survival Rate by Passenger Class")
+```
+
+
+```{r}
+titanic <- mutate(titanic, Survived = as.factor(Survived))
+ggplot(titanic, aes(x=Pclass, fill=Survived)) + 
+  geom_bar() +
+  labs( y="Number of Passengers", x="Ticket Class", title="Titanic Survival Rate by Passenger Class")
+```
+
+```{r}
+ggplot(titanic, aes(x=Sex, fill=Survived)) +
+  geom_bar() +
+  labs( y="Number of Passengers", title="Titanic Survival Rate by Gender by Passenger Class")+ 
+  facet_wrap(~Pclass)
+```
+
+```{r}
+ggplot(titanic, aes(x=Age, fill=Survived))+
+  geom_histogram(bins=20) +
+  labs(title="Survival Rate by Gender", y="Number of passengers", subtitle = "Distribution by age")
+```
+
+```{r}
+ggplot(titanic, aes(x=Age, fill=Survived))+
+  geom_histogram(bins=20) +
+  labs(title="Survival Rate by Gender", y="Number of passengers", subtitle = "Distribution by age, gender and ticket class")+
+  facet_grid(Sex~Pclass, scales="free")
+```
+
+
+```{r}
+titanic <- mutate(titanic, Pclass = as.factor(Pclass))
+ ggplot(data = titanic, aes(x=Pclass, y=Age)) +
+  geom_boxplot(alpha=0.7)
+```
+
+```{r}
+ ggplot(data = titanic, aes(x=Age, y=Fare)) +
+  geom_point()
+```
+
+```{r}
+ ggplot(data = titanic, aes(x=Age, y=Fare, color=Pclass)) +
+  geom_point()
+```
