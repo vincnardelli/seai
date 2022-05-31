@@ -40,8 +40,15 @@ Date: 03/06/2021
   - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/extra/seai_lab1_extra5_DBSCAN.ipynb) Extra: DBSCAN 
 
 
-## Lab 2 - Intro to spatial data with R
+## Lab 2 - Intro to R
 Date: 09/06/2021
+[![Open in web page](https://img.shields.io/badge/md-Open%20in%20webpage-blue)](/seai/seai_lab2)
+
+### Topics:
+- Intro
+- Matrix computation
+- Data manipulation with dplyr
+- Graphs with ggplot2
 
 
 
