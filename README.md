@@ -1,38 +1,10 @@
-# Spatial Analysis with Python
+# Spatial Analysis with R and Python
 
-The material you will find on this repository was created for the labs of the Spatial Econometrics Advanced Institute 2021 course organized by the Spatial Econometrics Association.
+The material you will find on this repository was created for the labs of the Spatial Econometrics Advanced Institute 2022 course organized by the Spatial Econometrics Association.
 
-[Check all the materials in the course website](https://vincnardelli.github.io/seai2021/)
+[Check all the materials in the course website](https://vincnardelli.github.io/seai/)
 
 ---
-
-## Course overview
-### Lab 1 - Intro to Python
-- 1 - Matrix computation with NumPy
-- 2 - Data manipulation and analysis with Pandas
-- 3 - Graphs with Matplotlib and Seaborn
-
-### Lab 2 - Spatial data and W matrices
-- 1 - Loading and plotting Spatial Data
-- 2 - Computation of W matrix
-- 3 - Extra: Intro to kriging with pykrige
-
-
-### Lab 3 - ESDA and Spatial Econometrics Models
-- 1 - Exploratory Spatial Data Analysis
-- 2 - Spatial Econometrics Models
-
-
-
-## References
-- VanderPlas, Jake. Python data science handbook: Essential tools for working with data.  O'Reilly Media, Inc., 2016. [Website](https://jakevdp.github.io/PythonDataScienceHandbook/)
-- McKinney, Wes. Python for data analysis: Data wrangling with Pandas, NumPy, and IPython.  O'Reilly Media, Inc., 2012. [Website](https://wesmckinney.com/pages/book.html)
-- Anselin, Luc, and Sergio Joseph Rey. Modern spatial econometrics in practice: A guide to GeoDa, GeoDaSpace and PySAL. GeoDa Press LLC, 2014.
-- Sergio J. Rey, Dani Arribas-Bel, Levi J. Wolf - Geographic Data Science with PySAL and the PyData Stack [Website](https://geographicdata.science/book/intro.html)
-
-
-[Check all the references in the course website](https://vincnardelli.github.io/seai2021/references)
-
 
 ## Contributions
 
