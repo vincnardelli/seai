@@ -20,7 +20,7 @@ In the section below you will find buttons for each lesson to automatically impo
 
 # Course schedule
 ## Lab 1 - Intro to Python 
-Date: 03/06/2021
+Date: 03/06/2022
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab1/seai_lab1.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab1)
 
@@ -41,7 +41,7 @@ Date: 03/06/2021
 
 
 ## Lab 2 - Intro to R
-Date: 09/06/2021
+Date: 09/06/2022
 
 [![Open in web page](https://img.shields.io/badge/md-Open%20in%20webpage-blue)](/seai/seai_lab2)
 
@@ -54,12 +54,12 @@ Date: 09/06/2021
 
 
 ## Lab 3 - Spatial W matrices with R
-Date: 10/06/2021
+Date: 10/06/2022
 
 
 
 ## Lab 4 - Spatial data and W matrices with Python
-Date: 10/06/2021
+Date: 10/06/2022
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab4/seai_lab4.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab4)
 
@@ -72,17 +72,17 @@ Date: 10/06/2021
 
 
 ## Lab 5 - Spatial Autocorrelation with R
-Date: 16/06/2021
+Date: 16/06/2022
 
 
 
 ## Lab 6 - Spatial Econometrics Models with R
-Date: 17/06/2021
+Date: 17/06/2022
 
 
 
 ## Lab 7 - ESDA and Spatial Econometrics Models with Python
-Date: 17/06/2021
+Date: 17/06/2022
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vincnardelli/seai/blob/main/lab7/seai_lab7.ipynb) [![Open in web page](https://img.shields.io/badge/ipynb-Open%20in%20webpage-blue)](/seai/seai_lab7)
 
