@@ -30,7 +30,7 @@ Official website [https://numpy.org/](https://numpy.org/)
 
 Official website [https://pandas.pydata.org/](https://pandas.pydata.org/)
 
-[Pandas cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Pandas_Cheat_Sheet.pdf)
+[Pandas cheatsheet](https//pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
 **Matplotlib** 
 
