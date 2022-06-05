@@ -20,6 +20,15 @@ show_sidebar: false
 
 ## Useful links
 
+### R
+
+**sf**
+Official website [https://r-spatial.github.io/sf/](https://r-spatial.github.io/sf/)
+[sf cheatsheet](https://github.com/rstudio/cheatsheets/raw/main/sf.pdf)
+
+
+### Python
+
 **Numpy** 
 
 Official website [https://numpy.org/](https://numpy.org/) 
@@ -30,7 +39,7 @@ Official website [https://numpy.org/](https://numpy.org/)
 
 Official website [https://pandas.pydata.org/](https://pandas.pydata.org/)
 
-[Pandas cheatsheet](https//pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+[Pandas cheatsheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
 **Matplotlib** 
 
