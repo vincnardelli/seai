@@ -1,17 +1,25 @@
 ---
 output:
   md_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 # SEAI 2022 - R - Lab 2
+
 # Intro to R
-Vincenzo Nardelli - vincnardelli@gmail.com - https://github.com/vincnardelli
+
+Vincenzo Nardelli -
+[vincnardelli\@gmail.com](mailto:vincnardelli@gmail.com){.email} -
+<https://github.com/vincnardelli>
 
 ## Lab structure
-- Intro
-- Matrix computation
-- Data manipulation with dplyr
-- Graphs with ggplot2
+
+-   Intro
+-   Matrix computation
+-   Data manipulation with dplyr
+-   Graphs with ggplot2
 
 Let's start from the basics!
 
@@ -32,7 +40,6 @@ result
 print(result)
 ```
 
-
 ```{r}
 result <- result * 3.1415
 print(result)
@@ -43,15 +50,19 @@ vector = c(1, 3, 8, 13)
 vector
 ```
 
-Unlike Python, the basic version of R allow operations between scalars and matrices without loading any external packages.
+Unlike Python, the basic version of R allow operations between scalars
+and matrices without loading any external packages.
 
 ```{r}
 vector[1]
 ```
 
-The subset is very similar to Python but the index starts from 1 instead of 0. 
+The subset is very similar to Python but the index starts from 1 instead
+of 0.
 
-Furthermore, in the case of multiple selection, the index starts from 1 and the second value representing the last element is included in the subset (unlike Python which is NOT included).
+Furthermore, in the case of multiple selection, the index starts from 1
+and the second value representing the last element is included in the
+subset (unlike Python which is NOT included).
 
 ```{r}
 vector[1:3]
@@ -64,6 +75,7 @@ vector[c(FALSE, TRUE, TRUE, FALSE)]
 ```{r}
 vector < 3
 ```
+
 ```{r}
 vector[vector < 3]
 ```
@@ -71,6 +83,7 @@ vector[vector < 3]
 ```{r}
 1:10
 ```
+
 ```{r}
 seq(from=1, to=10, by=1)
 ```
@@ -80,9 +93,11 @@ Inside a vector we can insert just homogeneous class object.
 ```{r}
 class("a")
 ```
+
 ```{r}
 class(1)
 ```
+
 ```{r}
 c(1, "a")
 ```
@@ -92,6 +107,7 @@ class(c(1, "a"))
 ```
 
 # 1 - Matrix computation
+
 ```{r}
 a <- matrix(c(10, 8, 5, 12), nrow=2, ncol=2, byrow=TRUE)
 a
@@ -110,6 +126,7 @@ a[1, ]
 ```{r}
 a[, 1]
 ```
+
 ```{r}
 a[1, 1]
 ```
@@ -119,6 +136,7 @@ Operations with matrices
 ```{r}
 a + 2
 ```
+
 ```{r}
 a * 2
 ```
@@ -131,6 +149,7 @@ t(a)
 b <- matrix(c(5, 3, 15, 6), ncol = 2, byrow = TRUE)
 b
 ```
+
 ```{r}
 a + b
 ```
@@ -150,6 +169,7 @@ a %*% b
 ```{r}
 crossprod(a,b)
 ```
+
 ```{r}
 t(a) %*% b
 ```
@@ -166,12 +186,11 @@ Determinant
 det(a)
 ```
 
-Inverse of a matrix 
+Inverse of a matrix
 
 ```{r}
 solve(a)
 ```
-
 
 # 2 - Data manipulation with dplyr
 
@@ -186,7 +205,9 @@ mtcars
 class(mtcars)
 ```
 
-A ``data.frame`` is an analog of a matrix which can contains a differenc class of object for each column. It is the perfect class to store the data which we commonly use for our analysis.
+A `data.frame` is an analog of a matrix which can contains a difference
+classes of objects for each column. It is the perfect class to store the
+data which we commonly use for our analysis.
 
 ```{r}
 dim(mtcars)
@@ -205,12 +226,15 @@ Subset a dataframe with base R
 ```{r}
 mtcars[1,]
 ```
+
 ```{r}
 mtcars[1:3, ]
 ```
+
 ```{r}
 mtcars[, 1]
 ```
+
 ```{r}
 mtcars$hp
 ```
@@ -223,13 +247,15 @@ titanic = read.csv(path)
 head(titanic)
 ```
 
-Now we will explore the use of dplyr in subsetting, manipulating and summarising our data frame.
-Most of the task that we will cover are possible also in base R without the use of others packages but dplyr simplify a lot the work. 
-
+Now we will explore the use of dplyr in subsetting, manipulating and
+summarising our data frame. Most of the task that we will cover are
+possible also in base R without the use of others packages but dplyr
+simplify a lot the work.
 
 ## R packages
 
 How to install an R package from CRAN
+
 ```{r}
 #install.packages("dplyr")
 ```
@@ -241,33 +267,39 @@ library(dplyr)
 ```
 
 ## Subset variables (columns)
+
 ```{r}
 select(titanic, PassengerId, Age)
 ```
 
 ## Subset observations (Rows)
+
 ```{r}
 filter(titanic, Age < 18)
 ```
+
 ## The pipe function
-The pipe function %>% helps to create a series of function to perform the data wrangling and makes the code more readable. For example if we want to select some columns and filter some rows we can write...
+
+The pipe function %\>% helps to create a series of function to perform
+the data wrangling and makes the code more readable. For example if we
+want to select some columns and filter some rows we can write...
 
 ```{r}
 filter(select(titanic, PassengerId, Age), Age <18)
 ```
-As you can see the select function is nested in the filter function to keep the order we decided.
-Using pipes the code could be writed as:
+
+As you can see the select function is nested in the filter function to
+keep the order we decided. Using pipes the code could be writed as:
+
 ```{r}
 titanic %>% 
   select(PassengerId, Age) %>% 
   filter(Age < 18)
 ```
 
-You can think a pipe as the command "then".
-The previous algorithm can be interpreted as:
-- Load data then
-- Select Id and Age then
-- Filter Age less then 18
+You can think a pipe as the command "then". The previous algorithm can
+be interpreted as: - Load data then - Select Id and Age then - Filter
+Age less then 18
 
 ## Make new variables
 
@@ -279,6 +311,7 @@ titanic %>%
 ```
 
 # Arrange data
+
 ```{r}
 titanic %>% 
   select(PassengerId, Age) %>% 
@@ -286,7 +319,6 @@ titanic %>%
   mutate(Age_Bracket = ifelse(Age < 18, 'Minor','Major')) %>% 
   arrange(Age)
 ```
-
 
 ## Group and summarise data
 
@@ -315,7 +347,6 @@ titanic %>%
   summarise(survived_perc = mean(Survived))
 ```
 
-
 ```{r}
 titanic %>% 
   filter(Sex == 'male') %>%
@@ -337,7 +368,6 @@ ggplot(titanic, aes(x=Pclass, fill=Survived)) +
   geom_bar() +
   labs( y="Number of Passengers", x="Passenger Class", title="Titanic Survival Rate by Passenger Class")
 ```
-
 
 ```{r}
 titanic <- mutate(titanic, Survived = as.factor(Survived))
@@ -365,7 +395,6 @@ ggplot(titanic, aes(x=Age, fill=Survived))+
   labs(title="Survival Rate by Gender", y="Number of passengers", subtitle = "Distribution by age, gender and ticket class")+
   facet_grid(Sex~Pclass, scales="free")
 ```
-
 
 ```{r}
 titanic <- mutate(titanic, Pclass = as.factor(Pclass))

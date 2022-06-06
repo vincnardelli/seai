@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:fme="http://www.safe.com/gml/fme" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.safe.com/gml/fme" elementFormDefault="qualified">
+<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+<element name="boston" type="fme:bostonType" substitutionGroup="gml:_Feature"/>
+<complexType name="bostonType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="ID" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="TOWN" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="TOWNNO" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="TRACT" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="LON" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="LAT" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="x" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="y" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="MEDV" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="CMEDV" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="CRIM" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="ZN" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="INDUS" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="CHAS" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="NOX" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="RM" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="AGE" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="DIS" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="RAD" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="TAX" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="PTRATIO" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="B" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element name="LSTAT" minOccurs="0">
+<simpleType>
+<restriction base="decimal">
+<totalDigits value="16"/>
+<fractionDigits value="6"/>
+</restriction>
+</simpleType></element>
+<element ref="gml:pointProperty" minOccurs="0"/>
+<element ref="gml:multiPointProperty" minOccurs="0"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+</schema>

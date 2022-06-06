@@ -1,0 +1,325 @@
+---
+output:
+  md_document
+  
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# SEAI 2022 - R - Lab 3
+
+# Intro to R
+
+Vincenzo Nardelli -
+[vincnardelli\@gmail.com](mailto:vincnardelli@gmail.com){.email} -
+<https://github.com/vincnardelli>
+
+## Lab structure
+
+
+Loading and plotting spatial data
+
+```{r}
+library(dplyr)
+data = read.csv("data/dataNUTS3/dataNUTS3.csv")
+head(data)
+```
+
+```{r}
+data <- data %>% 
+  filter(year == 2012)
+
+head(data)
+```
+
+```{r}
+summary(data$category)
+```
+
+```{r}
+data <- data %>% 
+  mutate(category = as.factor(category), 
+         state = as.factor(state))
+summary(data$category)
+```
+
+```{r}
+summary(data$state)
+```
+
+```{r}
+library(ggplot2)
+
+data <- data %>% 
+  mutate(pop_dens_log = log(pop_dens), 
+         pcgdp_log = log(pcgdp))
+
+ggplot(data) + 
+  geom_point(aes(pop_dens_log, pcgdp_log))
+```
+
+```{r}
+ggplot(data) + 
+  geom_point(aes(pop_dens_log, pcgdp_log, color=state), alpha=0.3)
+```
+
+# Areal data
+
+sf package [Link](https://r-spatial.github.io/sf/) 
+
+Package sf represents simple features as records in a data.frame or tibble with a geometry list-column and natively in R all 17 simple feature types for all dimensions (XY, XYZ, XYM, XYZM)
+
+Simple features or simple feature access refers to a formal standard (ISO 19125-1:2004) that describes how objects in the real world can be represented in computers, with emphasis on the spatial geometry of these objects. It also describes how such objects can be stored in and retrieved from databases, and which geometrical operations should be defined for them.
+
+The standard is widely implemented in spatial databases (such as PostGIS), commercial GIS (e.g., ESRI ArcGIS) and forms the vector data basis for libraries such as GDAL. A subset of simple features forms the GeoJSON standard.
+
+R has well-supported classes for storing spatial data (sp) and interfacing to the above mentioned environments (rgdal, rgeos), but has so far lacked a complete implementation of simple features, making conversions at times convoluted, inefficient or incomplete. The package sf tries to fill this gap, and aims at succeeding sp in the long term.
+
+```{r}
+library(sf)
+df_sf <- read_sf("data/dataNUTS3/NUTS_RG_10M_2013.shp")
+df_sf
+```
+
+```{r}
+df_sf <- df_sf %>% 
+  left_join(data, by="NUTS_ID") 
+
+df_sf
+```
+
+
+```{r}
+ggplot(df_sf) +
+  geom_sf(aes(fill=pop_dens))
+```
+```{r}
+ggplot(df_sf) +
+  geom_sf(aes(fill=pop_dens), lwd=0.1) +
+  xlim(-11, 30) +
+  ylim(34, 70)
+```
+
+
+```{r}
+library(tmap)
+df_sf <- st_make_valid(df_sf)
+tm_shape(df_sf) +
+  tm_polygons("pop_dens")
+```
+
+```{r}
+tm_shape(df_sf, bbox=tmaptools::bb(matrix(c(-11,30,34,70),2,2))) +
+    tm_polygons(col = "pop_dens", style = "quantile")
+```
+
+Interactive mapping
+```{r}
+map <- tm_shape(df_sf, bbox=tmaptools::bb(matrix(c(-11,30,34,70),2,2))) +
+    tm_polygons(col = "pop_dens", style = "quantile")
+
+tmap_leaflet(map)
+```
+
+
+
+
+# Point data
+```{r}
+kc = read_sf("data/kingcounty/kc_house.shp")
+kc
+```
+
+Coordinate Reference Systems
+
+A coordinate reference system (CRS) then defines how the two-dimensional, projected map in your GIS relates to real places on the earth. The decision of which map projection and CRS to use depends on the regional extent of the area you want to work in, on the analysis you want to do, and often on the availability of data.
+
+[https://datacarpentry.org/organization-geospatial/03-crs/](https://datacarpentry.org/organization-geospatial/03-crs/)
+
+
+```{r}
+st_crs(kc)
+```
+
+Let's try to do the same starting from non-projected non-spatial dataset from a csv file!
+
+```{r}
+kc = read.csv("data/kingcounty/kc_house_data.csv")
+head(kc)
+```
+
+```{r}
+kc <- kc %>% 
+  st_as_sf(coords = c("long", "lat"), crs = 4326)
+```
+
+
+```{r}
+ggplot(kc) +
+  geom_sf(aes(color=price))
+
+```
+
+```{r}
+tm_shape(kc) +
+  tm_bubbles(col="price", scale=0.5, alpha=0.8, style="quantile", 
+             border.lwd=0)
+```
+
+
+```{r}
+map <- kc %>% 
+  head(1000) %>% 
+  tm_shape() +
+  tm_bubbles(col="price", scale=0.2, alpha=0.8, style="quantile", 
+             border.lwd=0)
+
+tmap_leaflet(map)
+
+```
+
+
+# Computation of W matrix
+
+spdep package
+[https://r-spatial.github.io/spdep/](https://r-spatial.github.io/spdep/)
+
+
+
+## W matrix for regular grid data
+```{r}
+library(spdep)
+n<-4 #the dimension of the grid is n x n
+nb_grid <- cell2nb(n, n)  
+summary(nb_grid)
+```
+```{r}
+xyc <- attr(nb_grid, "region.id")
+xy <- matrix(as.integer(unlist(strsplit(xyc, ":"))), ncol=2, byrow=TRUE)
+plot(nb_grid, xy)
+```
+
+## W matrix for irregular data
+
+In the case of irregular data, it is possible to import a GAL (.gal).
+```{r}
+#nb <- read.gal("path_to_file")
+```
+
+## W matrix from sf 
+
+```{r}
+columbus <- read_sf("data/columbus/columbus.shp")
+
+nb<-poly2nb(columbus, queen=T)
+nb
+```
+
+```{r}
+summary(nb)
+```
+
+```{r}
+nb[[1]]
+```
+
+
+```{r}
+columbus_sp <- as(columbus, 'Spatial')
+
+nb_sf <- as(nb2lines(nb, coords = coordinates(columbus_sp)), 'sf')
+nb_sf <- st_set_crs(nb_sf, st_crs(columbus))
+
+ggplot(columbus) + 
+  geom_sf(fill = 'gray', color = 'white') +
+  geom_sf(data = nb_sf) +
+  theme_minimal() +
+  ylab("Latitude") +
+  xlab("Longitude")
+```
+List W object
+it resume a W matrix, saving space. A listw object has 3 components:
+1) a nb object
+2)list of n numeric vectors, each of the same length as the corresponding non-zero vectors
+in the nb object. These give the values of the spatial weights for each i-j neighbour pair. 
+3)the style of W as a character code: "B" for binary weights taking values zero or one, "W" for
+row-standardized matrix,"C" is globally standardised
+
+
+```{r}
+listw <- nb2listw(nb, style="W")
+listw
+```
+
+```{r}
+nb2listw(nb, style="B")
+```
+
+
+## W matrix for point data
+
+```{r}
+boston <- read_sf("data/boston/boston.shp")
+
+coord <- cbind(boston$LON,boston$LAT)
+head(coord)
+```
+
+
+### KNN
+```{r}
+knn = knearneigh(coord, k=5)
+nb = knn2nb(knn)
+plot(nb, coord)
+```
+```{r}
+listw <- nb2listw(nb)
+listw
+```
+
+
+
+### Distance
+```{r}
+distM<- as.matrix(dist(coord))
+distM[1:5, 1:5]
+```
+
+
+```{r}
+W1<- 1/(distM)
+diag(W1) <- 0
+
+
+W2<- 1/(1+distM)^2
+diag(W2) <- 0 
+
+W3<- exp(-distM^2)
+diag(W3) <- 0 
+```
+
+```{r}
+mat2listw(W1)
+```
+
+Threshold distance
+
+```{r}
+nb <- dnearneigh(coord, 0, 1.5, longlat = T)
+nb
+```
+```{r}
+plot(nb, coord)
+```
+
+```{r}
+nb <- dnearneigh(coord, 0, 5, longlat = T)
+nb
+```
+
+```{r}
+listw <- nb2listw(nb)
+listw
+plot(nb, coord)
+```

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Boston Housing Data</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #0000ee; -webkit-text-stroke: 0px #0000ee}
+    td.td1 {width: 94.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 199.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td3 {width: 54.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td4 {width: 592.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Boston Housing Data</b></span></h1>
+<p class="p2"><span class="s1"><i>Data provided "as is," no warranties.</i></span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><b>File Description</b><br>
+Housing and neighborhood data for the city of Boston.</span></p>
+<p class="p2"><span class="s1">Files:</span></p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><span class="s1">boston.txt:</span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p4"><span class="s1">Input ASCII file to create point shape file</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><span class="s1">boston.shp shx dbf:</span></p>
+      </td>
+      <td valign="middle" class="td2">
+        <p class="p4"><span class="s1">Point shape file<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><span class="s1">Observations = 506<br>
+Variables = 23</span></p>
+<p class="p2"><span class="s1"><b>Source</b><br>
+Data created from boston.c data frame in R's spdep package. Original source: <a href="http://lib.stat.cmu.edu/datasets/boston_corrected.txt"><span class="s2">http://lib.stat.cmu.edu/datasets/boston_corrected.txt</span></a><br>
+Variables and References: R spdep Manual (p. 15), available at <a href="http://cran.us.r-project.org/"><span class="s2">http://cran.us.r-project.org</span></a></span></p>
+<p class="p2"><span class="s1"><b>References</b><br>
+Harrison, David, and Daniel L. Rubinfeld. (1978). Hedonic Housing Prices and the Demand for Clean Air, <i>Journal of Environmental Economics and Management</i>, Volume 5, 81- 102. Original data.</span></p>
+<p class="p2"><span class="s1">Gilley, O.W., and R. Kelley Pace. (1996). On the Harrison and Rubinfeld Data, <i>Journal of Environmental Economics and Management</i>, 31, 403-405. Provided corrections and examined censoring.</span></p>
+<p class="p2"><span class="s1">Pace, R. Kelley, and O.W. Gilley. (1997). Using the Spatial Configuration of the Data to Improve Estimation, <i>Journal of the Real Estate Finance and Economics</i>, 14, 333-340.</span></p>
+<p class="p2"><span class="s1"><b>Notes</b><br>
+In R, use library(MASS) and write.matrix (frame or matrix name, file="output file",sep=",") to write data frames or matrices to a file.</span></p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p5"><span class="s1"><b>Variable</b></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p5"><span class="s1"><b>Description</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">ID<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">Sequential ID<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">TOWN<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A factor with levels given by town names<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">TOWNNO<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector corresponding to TOWN<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">TRACT<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of tract ID numbers<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">LON<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of tract point longitudes in decimal degrees<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">LAT<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of tract point latitudes in decimal degrees<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">X<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">X Coordinates (UTM Zone 19)<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">Y<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">Y Coordinates (UTM Zone 19)<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">MEDV<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of median values of owner-occupied housing in USD 1000<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">CMEDV<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of corrected median values of owner-occupied housing in USD 1000<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">CRIM<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of per capita crime<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">ZN<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of proportions of residential land zoned for lots over 25000 sq. ft per town (constant for all Boston tracts)<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">INDUS<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of proportions of non-retail business acres per town (constant for all Boston tracts)<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">CHAS<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A factor with levels 1 if tract borders Charles River; 0 otherwise<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">NOX<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of nitric oxides concentration (parts per 10 million) per town</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">RM<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of average numbers of rooms per dwelling</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">AGE<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of proportions of owner-occupied units built prior to 1940<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">DIS</span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of weighted distances to five Boston employment centers<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">RAD<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of an index of accessibility to radial highways per town (constant for all Boston tracts)</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">TAX</span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector full-value property-tax rate per USD 10,000 per town (constant for all Boston tracts)</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">PTRATIO<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of pupil-teacher ratios per town (constant for all Boston tracts)<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">B<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of 1000*(Bk - 0.63)^2 where Bk is the proportion of blacks<span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td3">
+        <p class="p4"><span class="s1">LSTAT</span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p4"><span class="s1">A numeric vector of percentage values of lower status population</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Prepared by Luc Anselin.</span></p>
+<p class="p2"><span class="s1">Last updated June 3, 2004</span></p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<style>
+<!--
+a:link { color:#333333; text-decoration:none; font-weight: bold;}
+a:visited { color:#333333; text-decoration:none; font-weight: bold;}
+a:active { color:#B7B7B7; text-decoration:underline; font-weight: bold;}
+a:hover { color:#993366; text-decoration:underline; font-weight: bold;}
+body,table,tr,td { font-size:10pt; font-family:Verdana, Arial, Helvetica, sans-serif; color:#585858 }
+
+.leading170 { line-height: 170% }
+
+BODY
+
+h1 {color: "#5A85A2";
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16pt}
+
+h2 {color: rgb(126,161,194);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    font-size: 14pt}
+
+h3 {color: #993366;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    font-size: 12pt}
+
+h4 {color: "#000000";
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12pt}
+
+h5 {color: "#0000CC";
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 12pt}
+
+h6 {color: "#000000";
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    font-size: 12pt; 
+    font-style: normal;  
+    font-weight: normal}
+
+p {color: "#000000";
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 10pt}
+
+li {color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 10pt}
+
+ol {color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 10pt}
+
+ul {color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 10pt;
+    list-style: circle}
+
+select {font-size: 8pt}
+
+{scrollbar-face-color: #FFFFFF; scrollbar-shadow-color: #6C6C6C;
+
+scrollbar-highlight-color: #E5E5E5; scrollbar-3dlight-color: #E5E5E5;
+
+scrollbar-darkshadow-color: #E5E5E5; scrollbar-track-color:#E8E8E8;
+
+scrollbar-arrow-color: #6C6C6C}
+-->
+</style>
