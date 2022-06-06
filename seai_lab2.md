@@ -254,8 +254,8 @@ Let’s start loading same data from R.
 
     ## [1] "data.frame"
 
-A `data.frame` is an analog of a matrix which can contains a differenc
-class of object for each column. It is the perfect class to store the
+A `data.frame` is an analog of a matrix which can contains a difference
+classes of objects for each column. It is the perfect class to store the
 data which we commonly use for our analysis.
 
     dim(mtcars)
@@ -1616,7 +1616,7 @@ Load package in the environment
 
 ## The pipe function
 
-The pipe function %>% helps to create a series of function to perform
+The pipe function %&gt;% helps to create a series of function to perform
 the data wrangling and makes the code more readable. For example if we
 want to select some columns and filter some rows we can write…
 
