@@ -56,7 +56,13 @@ Date: 09/06/2022
 ## Lab 3 - Spatial W matrices with R
 Date: 10/06/2022
 
+[![Open in web page](https://img.shields.io/badge/md-Open%20in%20webpage-blue)](/seai/seai_lab3)
 
+### Topics:
+- Intro
+- 1 - Loading and plotting Spatial Data
+- 2 - Computation of W matrix
+- Extra: rgeoda
 
 ## Lab 4 - Spatial data and W matrices with Python
 Date: 10/06/2022
@@ -67,18 +73,18 @@ Date: 10/06/2022
 - Intro
 - 1 - Loading and plotting Spatial Data
 - 2 - Computation of W matrix
-- 3 - Extra: Intro to kriging with pykrige
-
 
 
 ## Lab 5 - Spatial Autocorrelation with R
 Date: 16/06/2022
 
+*Coming soon*
 
 
 ## Lab 6 - Spatial Econometrics Models with R
 Date: 17/06/2022
 
+*Coming soon*
 
 
 ## Lab 7 - ESDA and Spatial Econometrics Models with Python
