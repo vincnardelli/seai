@@ -78,14 +78,25 @@ Date: 10/06/2022
 ## Lab 5 - Spatial Autocorrelation with R
 Date: 16/06/2022
 
-*Coming soon*
+[![Open in web page](https://img.shields.io/badge/md-Open%20in%20webpage-blue)](/seai/seai_lab5)
+
+### Topics:
+- 1 - Spatial Lag
+- 2 - Moran's I
+- 3 - Local Moran
 
 
 ## Lab 6 - Spatial Econometrics Models with R
 Date: 17/06/2022
 
-*Coming soon*
+[![Open in web page](https://img.shields.io/badge/md-Open%20in%20webpage-blue)](/seai/seai_lab6)
 
+### Topics:
+- 1 - OLS
+- 2 - Tests on residuals
+- 3 - Spatial Lag Model
+- 4 - Spatial Error Model
+- 5 - SARAR
 
 ## Lab 7 - ESDA and Spatial Econometrics Models with Python
 Date: 17/06/2022
