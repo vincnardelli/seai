@@ -1,0 +1,140 @@
+---
+output:
+  md_document
+  
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# SEAI 2022 - R - Lab 5
+
+# Spatial Autocorrelation with R
+
+Vincenzo Nardelli -
+[vincnardelli\@gmail.com](mailto:vincnardelli@gmail.com){.email} -
+<https://github.com/vincnardelli>
+
+## Lab structure
+
+
+Let's load columbus data
+```{r}
+library(sf)
+library(dplyr)
+library(tmap)
+library(spdep)
+library(ggplot2)
+
+columbus <- read_sf("data/columbus/columbus.shp")
+
+tm_shape(columbus) +
+  tm_polygons("CRIME")
+```
+
+```{r}
+tm_shape(columbus) +
+  tm_polygons("CRIME")
+```
+
+```{r}
+nb<-poly2nb(columbus, queen=T)
+nb
+```
+```{r}
+listw <- nb2listw(nb)
+listw
+```
+
+
+```{r}
+columbus_sp <- as(columbus, 'Spatial')
+
+nb_sf <- as(nb2lines(nb, coords = coordinates(columbus_sp)), 'sf')
+nb_sf <- st_set_crs(nb_sf, st_crs(columbus))
+
+ggplot(columbus) + 
+  geom_sf(fill = 'gray', color = 'white') +
+  geom_sf(data = nb_sf) +
+  theme_minimal() +
+  ylab("Latitude") +
+  xlab("Longitude")
+```
+
+## Spatial lag
+Compute the lagged value from the W matrix
+
+$ylag_{i}=\sum_{j} w_{i, j} y_{j}$
+
+```{r}
+columbus$CRIME
+```
+
+```{r}
+columbus$CRIME_lag <- lag.listw(listw, columbus$CRIME)
+columbus$CRIME_lag
+```
+
+```{r}
+listw2mat(listw) %*% columbus$CRIME
+```
+
+```{r}
+m1 <- tm_shape(columbus) +
+  tm_polygons("CRIME")
+
+m2 <- tm_shape(columbus) +
+  tm_polygons("CRIME_lag")
+
+tmap_arrange(m1, m2)
+```
+
+## Moran's Index
+```{r}
+moran.test(columbus$CRIME, listw)
+```
+
+```{r}
+moran.mc(columbus$CRIME, listw, nsim=1000)
+```
+
+```{r}
+moran.plot(columbus$CRIME, listw)
+```
+
+```{r}
+mp <- moran.plot(columbus$CRIME, listw)
+xname <- "CRIME"
+ggplot(mp, aes(x=x, y=wx)) + geom_point(shape=1) + 
+    geom_smooth(formula=y ~ x, method="lm") + 
+    geom_hline(yintercept=mean(mp$wx), lty=2) + 
+    geom_vline(xintercept=mean(mp$x), lty=2) + theme_minimal() + 
+    geom_point(data=mp[mp$is_inf,], aes(x=x, y=wx), shape=9) +
+    geom_text(data=mp[mp$is_inf,], aes(x=x, y=wx, label=labels, vjust=1.5)) +
+    xlab(xname) + ylab(paste0("Spatially lagged ", xname))
+
+```
+## Local Moran
+```{r}
+locm <- localmoran_perm(columbus$CRIME, listw)
+```
+
+```{r}
+columbus <- columbus %>%
+  mutate(CRIME_lag = lag.listw(listw, columbus$CRIME),
+         p_value = locm[, 5],
+         cluster = case_when(p_value < 0.05 & CRIME > mean(CRIME) & CRIME_lag > mean(CRIME_lag) ~ "HH", 
+                             p_value < 0.05 & CRIME < mean(CRIME) & CRIME_lag < mean(CRIME_lag) ~ "LL", 
+                             p_value < 0.05 & CRIME > mean(CRIME) & CRIME_lag < mean(CRIME_lag) ~ "HL", 
+                             p_value < 0.05 & CRIME < mean(CRIME) & CRIME_lag > mean(CRIME_lag) ~ "LH"), 
+         cluster = factor(cluster, levels = c("HH", "LL", "HL", "LH")))
+
+lisa_palette <- c("#ca0020","#0571b0","#f4a582","#92c5de")
+ggplot(columbus) + 
+  geom_sf(aes(fill=cluster), lwd=0.1) + 
+  theme_void() + 
+  scale_fill_manual(na.value = "lightgray", name="LISA", 
+                    values = (lisa_palette)) 
+
+```
+
