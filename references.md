@@ -7,7 +7,7 @@ show_sidebar: false
 
 # References
 ## Books references
-
+- Arbia, G. A primer for spatial econometrics with applications in R. Palgrave Macmillan, 2014.
 - VanderPlas, Jake. Python data science handbook: Essential tools for working with data.  O'Reilly Media, Inc., 2016. [Website](https://jakevdp.github.io/PythonDataScienceHandbook/)
 - McKinney, Wes. Python for data analysis: Data wrangling with Pandas, NumPy, and IPython.  O'Reilly Media, Inc., 2012. [Website](https://wesmckinney.com/pages/book.html)
 - Anselin, Luc, and Sergio Joseph Rey. Modern spatial econometrics in practice: A guide to GeoDa, GeoDaSpace and PySAL. GeoDa Press LLC, 2014.
@@ -21,11 +21,23 @@ show_sidebar: false
 ## Useful links
 
 ### R
+**dplyr**
+Official website [https://dplyr.tidyverse.org/](https://dplyr.tidyverse.org/)
+**ggplot2**
+Official website [https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/index.html)
+
+**tmap**
+Official website [https://r-tmap.github.io/tmap/](https://r-tmap.github.io/tmap/)
 
 **sf**
 Official website [https://r-spatial.github.io/sf/](https://r-spatial.github.io/sf/)
 [sf cheatsheet](https://github.com/rstudio/cheatsheets/raw/main/sf.pdf)
 
+**spdep**
+Official website [https://r-spatial.github.io/spdep/](https://r-spatial.github.io/spdep/)
+
+**spregression**
+Official website [https://r-spatial.github.io/spatialreg/](https://r-spatial.github.io/spatialreg/)
 
 ### Python
 
@@ -65,8 +77,3 @@ Official website [https://pysal.org/](https://pysal.org/)
 **Carto Frames** 
 
 Official website [https://carto.com/developers/cartoframes/](https://carto.com/developers/cartoframes/)
-
-
-**PyKrige** 
-
-Official website [https://geostat-framework.readthedocs.io/projects/pykrige/](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/contents.html)
