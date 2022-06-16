@@ -335,28 +335,6 @@ cat_fdr <- lisa_clusters(lisa, cutoff = fdr)
 cat_fdr
 ```
 
-### 4.2 Local Geary
-
-Local Geary is a type of LISA that focuses on squared differences/dissimilarity. A small value of the local geary statistics suggest positive spatial autocorrelation, whereas large values suggest negative spatial autocorrelation. For more details, please read: http://geodacenter.github.io/workbook/6b_local_adv/lab6b.html#local-geary
-
-
-For example, we can call the function local_geary() with the created Queen weights and the data “crm_prp” as input parameters:
-
-
-```{r}
-geary_crmprp <- local_geary(queen_w, crm_prp)
-```
-
-To get the cluster indicators of the local Geary computation:
-```{r}
-lisa_clusters(geary_crmprp)
-```
-
-To get the pseudo-p values of the local Geary computation:
-
-```{r}
-lisa_pvalues(geary_crmprp)
-```
 
 
 ## Exploratory Spatial Data Analysis
